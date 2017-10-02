@@ -1,6 +1,6 @@
-%global commit 9040b1447bd622bcbae3f8944e7b84d933037644
+%global commit ac9cc559cc21b884d3a4df1ad8c8630531bb779b
 %global short_commit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 20170324
+%global commit_date 20170802
 
 %global kodi_addon pvr.argustv
 %global kodi_version 17.0
@@ -9,7 +9,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        2.5.6
+Version:        2.5.9
 Release:        1%{?dist}
 Summary:        Kodi's ARGUS TV client addon
 
@@ -60,6 +60,9 @@ cp -p %{SOURCE1} .
 
 
 %changelog
+* Mon Oct 02 2017 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.5.9-1
+- Update to 2.5.9
+
 * Sat Apr 29 2017 Mohamed El Morabity <melmorabity@fedorapeople.org> - 1:2.5.6-1
 - Update to latest stable release for Kodi 17
 
