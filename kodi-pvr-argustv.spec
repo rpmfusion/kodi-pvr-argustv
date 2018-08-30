@@ -1,6 +1,6 @@
-%global commit 3556049fbcfe051569402cb3b420a18680cb9ed2
+%global commit c57a5c4e7dae8c2a7035c17dbc5d36eebcbcf130
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20180312
+%global commitdate 20180825
 
 %global kodi_addon pvr.argustv
 %global kodi_version 18.0
@@ -9,8 +9,8 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        3.4.1
-Release:        2%{?dist}
+Version:        3.5.2
+Release:        1%{?dist}
 Summary:        ArgusTV PVR for Kodi
 
 License:        GPLv2+
@@ -24,7 +24,7 @@ BuildRequires:  kodi-platform-devel >= %{kodi_version}
 BuildRequires:  pkgconfig(jsoncpp)
 BuildRequires:  platform-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 %description
 %{summary}.
@@ -53,6 +53,10 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Thu Aug 30 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:3.5.2-1
+- Update to 3.5.2
+- Enable aarch64 build
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:3.4.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
