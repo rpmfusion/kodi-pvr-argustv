@@ -7,7 +7,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
 Version:        3.5.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        ArgusTV PVR for Kodi
 
 License:        GPLv2+
@@ -50,6 +50,9 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Tue Feb 04 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:3.5.4-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Mon Jan 13 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:3.5.4-1
 - Update to 3.5.4
 
