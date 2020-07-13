@@ -1,20 +1,20 @@
 %global kodi_addon pvr.argustv
 %global kodi_version 18.0
-%global kodi_codename Leia
+%global kodi_codename Matrix
 
 Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        3.5.4
-Release:        2%{?dist}
+Version:        6.0.1
+Release:        1%{?dist}
 Summary:        ArgusTV PVR for Kodi
 
 License:        GPLv2+
 URL:            https://github.com/kodi-pvr/%{kodi_addon}/
 Source0:        %{url}/archive/%{version}-%{kodi_codename}/%{kodi_addon}-%{version}.tar.gz
 
-BuildRequires:  cmake
+BuildRequires:  cmake3
 BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  kodi-platform-devel >= %{kodi_version}
@@ -34,7 +34,7 @@ ExcludeArch:    %{power64} ppc64le
 %build
 # https://gitlab.kitware.com/cmake/cmake/issues/17555#note_355574
 export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
-%cmake .
+%cmake3
 %make_build
 
 
@@ -50,6 +50,9 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Mon Jul 13 2020 Leigh Scott <leigh123linux@gmail.com> - 1:6.0.1-1
+- Update to 6.0.1
+
 * Tue Feb 04 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:3.5.4-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
