@@ -7,7 +7,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
 Version:        21.0.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        ArgusTV PVR for Kodi
 
 License:        GPL-2.0-or-later
@@ -58,6 +58,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Sat Mar 15 2025 Leigh Scott <leigh123linux@gmail.com> - 1:21.0.0-4
+- Rebuild for new libjsoncpp
+
 * Tue Jan 28 2025 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1:21.0.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_42_Mass_Rebuild
 
