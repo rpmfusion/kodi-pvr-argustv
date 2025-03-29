@@ -6,8 +6,8 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        21.0.0
-Release:        4%{?dist}
+Version:        21.1.1
+Release:        1%{?dist}
 Summary:        ArgusTV PVR for Kodi
 
 License:        GPL-2.0-or-later
@@ -58,6 +58,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Sat Mar 29 2025 Leigh Scott <leigh123linux@gmail.com> - 1:21.1.1-1
+- Update to 21.1.1
+
 * Sat Mar 15 2025 Leigh Scott <leigh123linux@gmail.com> - 1:21.0.0-4
 - Rebuild for new libjsoncpp
 
